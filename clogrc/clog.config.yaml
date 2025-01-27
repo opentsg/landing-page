@@ -1,0 +1,6 @@
+---
+# yamllint disable rule:colons
+snippets:
+  # --- git snippets clog git <snippet> ----------------------------------------
+  git:
+    vcode: yq -r '.[0].version' releases.yaml

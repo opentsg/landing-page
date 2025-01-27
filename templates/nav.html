@@ -1,0 +1,19 @@
+{{define "nav"}}
+    <nav class="demo">
+        <a href="/" class="brand">
+            <img class="logo" src="r/img/favicon.png" />
+            <span>OpenTsg</span>
+        </a>
+
+        <!-- responsive menu for small screens -->
+        <input id="bmenub" type="checkbox" class="show">
+        <label for="bmenub" class="burger pseudo button"><img src="r/img/mo-menu.svg"></label>
+
+        <div class="menu">
+            <a href="/app/" class="pseudo button">📺 Studio App</a>
+            <a href="/dash/" class="pseudo button">🪵 Job Dashboard</a>
+            <a href="https://github.com/opentsg/issues/issues" target="_blank" class="pseudo button">☠️ Issues</a>
+        </div>
+    </nav>
+
+{{end}}

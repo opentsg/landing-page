@@ -1,0 +1,49 @@
+/* Dash extra classes for picnic base */
+
+.mono {
+  font-family: 'Ubuntu Mono', monospace;
+  color:darkslategrey;
+}
+
+.hdr  {
+    font-family: "Raleway", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+/* dash main is centered 1200px max*/
+.landing > main {
+  background: #fff;
+  text-align: left;
+  width: 50%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0 0;
+}
+
+/* highlight colors for values */
+.val {
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight:normal;
+  color:darkcyan;
+}
+.emval {
+  font-family: 'Ubuntu Mono', monospace;
+  font-weight:normal;
+  color:coral
+}
+
+table  {
+  width:100%;
+}
+
+.rainbow {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, gold, orange, red);   -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  border: 1px solid lightgray;
+}
+td {
+  border: 1px solid lightgray;
+}
