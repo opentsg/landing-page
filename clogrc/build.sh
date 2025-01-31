@@ -44,8 +44,10 @@ if fShouldMake "ko"; then
   # config is in .ko.yaml
   # use the default docker repo unless told otherwise
   [ -z "$KO_DOCKER_REPO" ] && KO_DOCKER_REPO="$DOCKER_NS"
-  ko build --base-import-paths --tags "0.1.0" --tags "latest" .
+  ko build --base-import-paths --tags "$vCODE" --tags "latest" .
   
   fInfo "${cT}All built to the$cF tmp/$cT folder\n"
+  ls -al tmp/${app}*
+  fInfo "multi-arch build$cF $PROJECT$cT:$cW$vCODE$cT and ${cW}latest"
 fi
 
