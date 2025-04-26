@@ -1,3 +1,4 @@
 # code names here: https://www.detective-store.com/content/glossary-of-terms-38
+- {version: "0.6.4", date: 2025-04-26, codename: ADC, note: css, version sync, relpath}
 - {version: "0.2.0", date: 2025-01-31, codename: ADC, note: css fix}
 - {version: "0.1.0", date: 2025-01-29, codename: ADC, note: first rc ko}

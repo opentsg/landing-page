@@ -3,4 +3,8 @@
 snippets:
   # --- git snippets clog git <snippet> ----------------------------------------
   git:
-    vcode: yq -r '.[0].version' releases.yaml
+    tag:
+        ref: yq -r '.[0].version' releases.yaml
+  project:
+    config: |
+      export PROJECT="opentsg-app-home"
