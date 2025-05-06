@@ -15,9 +15,12 @@ eval "$(clog Cat $helper)"  # build helpers
 clog Log -I  "Building Project$cS $bPROJECT $cT using clog $helper"
 
 clog Check pre-build
-[ $? -gt 0 ] && exit 1
+# [ $? -gt 0 ] && exit 1
+
 # ------------------------------------------------------------------------------
-EVERYTHING="build ko"
+fShouldMake () { [[ "${MAKE#*"$1"}" != "$MAKE" ]] }   # fn is substring of MAKE
+
+MAKE="build ko"
 [ -n "$1" ] && MAKE="$1"
 
 # ensure tmp dir exists
@@ -30,6 +33,7 @@ app=opentsg-app-home                                               # command you
 title="OpenTSG App Home"                                           # title of the software
 linkerPath="github.com/opentsg/opentsg-app-home/semver.SemVerInfo" # go tool objdump -S tmp/opentsg-ctl-watchfolder-amd-lnx|grep /semver.SemVerInfo
 
+clog Log -I "MAKE=$MAKE && build=$(fShouldMake build&&echo yes||echo no)"
 if fShouldMake "build"; then
   fGoBuild tmp/$app-amd-lnx     linux   amd64 $hash "$suffix" $app "$title" "$linkerPath"
   # fGoBuild tmp/$app-amd-win.exe windows amd64 $hash "$suffix" $app "$title" "$linkerPath"
